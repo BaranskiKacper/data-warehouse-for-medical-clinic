@@ -1,0 +1,2890 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/4/2022 7:48:19 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-2OSPV3V"
+  DTS:CreatorName="DESKTOP-2OSPV3V\maxba"
+  DTS:DTSID="{12D61D82-E095-4676-8B44-0B9F9669B7E5}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{3A6A6BB6-CB3B-4552-AF87-EA51469CA992}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Populating Lekarz Table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{052e7e1c-84de-4a52-a062-4f57ff4c8c39}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populating Lekarz Table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster)"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Lekarz (ClinicMaster)"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Przychodnia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Connections[OleDbConnection]"
+                  connectionManagerID="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  connectionManagerRefId="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[ID_przychodni]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[ID_przychodni]"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[ID_przychodni]"
+                      name="ID_przychodni"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Miasto]"
+                      length="30"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Miasto]"
+                      name="Miasto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Kod_pocztowy]"
+                      length="6"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Kod_pocztowy]"
+                      name="Kod_pocztowy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Ulica]"
+                      length="60"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Ulica]"
+                      name="Ulica"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Nr_budynku]"
+                      length="5"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Nr_budynku]"
+                      name="Nr_budynku"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Wielkość_przychodni]"
+                      length="20"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Wielkość_przychodni]"
+                      name="Wielkość_przychodni"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[ID_przychodni]"
+                      dataType="i4"
+                      name="ID_przychodni" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Miasto" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="Kod_pocztowy" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="60"
+                      name="Ulica" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="5"
+                      name="Nr_budynku" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="Wielkość_przychodni" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ID_przychodni]"
+                      dataType="i4"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ID_przychodni]"
+                      name="ID_przychodni" />
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Miasto]"
+                      name="Miasto" />
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Kod_pocztowy]"
+                      name="Kod_pocztowy" />
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Ulica]"
+                      name="Ulica" />
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Nr_budynku]"
+                      name="Nr_budynku" />
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Wielkość_przychodni]"
+                      name="Wielkość_przychodni" />
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating Lekarz Table\Lekarz (DW)"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Lekarz (DW)"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Przychodnia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating Lekarz Table\Lekarz (DW).Connections[OleDbConnection]"
+                  connectionManagerID="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  connectionManagerRefId="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].Columns[ID_przychodni]"
+                      cachedDataType="i4"
+                      cachedName="ID_przychodni"
+                      externalMetadataColumnId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].ExternalColumns[ID_przychodni]"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[ID_przychodni]" />
+                    <inputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].Columns[Miasto]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Miasto"
+                      externalMetadataColumnId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].ExternalColumns[Miasto]"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Miasto]" />
+                    <inputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].Columns[Kod_pocztowy]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Kod_pocztowy"
+                      externalMetadataColumnId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].ExternalColumns[Kod_pocztowy]"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Kod_pocztowy]" />
+                    <inputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].Columns[Ulica]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="Ulica"
+                      externalMetadataColumnId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].ExternalColumns[Ulica]"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Ulica]" />
+                    <inputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].Columns[Nr_budynku]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Nr_budynku"
+                      externalMetadataColumnId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].ExternalColumns[Nr_budynku]"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Nr_budynku]" />
+                    <inputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].Columns[Wielkość_przychodni]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Wielkość_przychodni"
+                      externalMetadataColumnId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].ExternalColumns[Wielkość_przychodni]"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output].Columns[Wielkość_przychodni]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].ExternalColumns[ID_przychodni]"
+                      dataType="i4"
+                      name="ID_przychodni" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].ExternalColumns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Miasto" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].ExternalColumns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="Kod_pocztowy" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].ExternalColumns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="60"
+                      name="Ulica" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].ExternalColumns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="5"
+                      name="Nr_budynku" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input].ExternalColumns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="Wielkość_przychodni" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating Lekarz Table\Lekarz (DW).Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating Lekarz Table\Lekarz (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating Lekarz Table\Lekarz (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Populating Lekarz Table.Paths[OLE DB Source Output]"
+              endId="Package\Populating Lekarz Table\Lekarz (DW).Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Populating Lekarz Table\Lekarz (ClinicMaster).Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Populating Pacjent Table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{d8b023c6-ca70-425b-b4f5-6891ae504f5d}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populating Pacjent Table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster)"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Pacjent (ClinicMaster)"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Przychodnia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Connections[OleDbConnection]"
+                  connectionManagerID="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  connectionManagerRefId="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[ID_przychodni]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[ID_przychodni]"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[ID_przychodni]"
+                      name="ID_przychodni"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Miasto]"
+                      length="30"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Miasto]"
+                      name="Miasto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Kod_pocztowy]"
+                      length="6"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Kod_pocztowy]"
+                      name="Kod_pocztowy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Ulica]"
+                      length="60"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Ulica]"
+                      name="Ulica"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Nr_budynku]"
+                      length="5"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Nr_budynku]"
+                      name="Nr_budynku"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Wielkość_przychodni]"
+                      length="20"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Wielkość_przychodni]"
+                      name="Wielkość_przychodni"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[ID_przychodni]"
+                      dataType="i4"
+                      name="ID_przychodni" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Miasto" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="Kod_pocztowy" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="60"
+                      name="Ulica" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="5"
+                      name="Nr_budynku" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="Wielkość_przychodni" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ID_przychodni]"
+                      dataType="i4"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ID_przychodni]"
+                      name="ID_przychodni" />
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Miasto]"
+                      name="Miasto" />
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Kod_pocztowy]"
+                      name="Kod_pocztowy" />
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Ulica]"
+                      name="Ulica" />
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Nr_budynku]"
+                      name="Nr_budynku" />
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Wielkość_przychodni]"
+                      name="Wielkość_przychodni" />
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating Pacjent Table\Pacjent (DW)"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Pacjent (DW)"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Przychodnia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating Pacjent Table\Pacjent (DW).Connections[OleDbConnection]"
+                  connectionManagerID="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  connectionManagerRefId="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].Columns[ID_przychodni]"
+                      cachedDataType="i4"
+                      cachedName="ID_przychodni"
+                      externalMetadataColumnId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].ExternalColumns[ID_przychodni]"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[ID_przychodni]" />
+                    <inputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].Columns[Miasto]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Miasto"
+                      externalMetadataColumnId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].ExternalColumns[Miasto]"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Miasto]" />
+                    <inputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].Columns[Kod_pocztowy]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Kod_pocztowy"
+                      externalMetadataColumnId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].ExternalColumns[Kod_pocztowy]"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Kod_pocztowy]" />
+                    <inputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].Columns[Ulica]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="Ulica"
+                      externalMetadataColumnId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].ExternalColumns[Ulica]"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Ulica]" />
+                    <inputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].Columns[Nr_budynku]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Nr_budynku"
+                      externalMetadataColumnId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].ExternalColumns[Nr_budynku]"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Nr_budynku]" />
+                    <inputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].Columns[Wielkość_przychodni]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Wielkość_przychodni"
+                      externalMetadataColumnId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].ExternalColumns[Wielkość_przychodni]"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output].Columns[Wielkość_przychodni]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].ExternalColumns[ID_przychodni]"
+                      dataType="i4"
+                      name="ID_przychodni" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].ExternalColumns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Miasto" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].ExternalColumns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="Kod_pocztowy" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].ExternalColumns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="60"
+                      name="Ulica" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].ExternalColumns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="5"
+                      name="Nr_budynku" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input].ExternalColumns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="Wielkość_przychodni" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating Pacjent Table\Pacjent (DW).Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating Pacjent Table\Pacjent (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating Pacjent Table\Pacjent (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Populating Pacjent Table.Paths[OLE DB Source Output]"
+              endId="Package\Populating Pacjent Table\Pacjent (DW).Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Populating Pacjent Table\Pacjent (ClinicMaster).Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Populating Przychodnia Table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{29f91a37-7c3c-4394-b825-1bed76592745}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populating Przychodnia Table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Populating Przychodnia Table\Converting from Unicode"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Converting from Unicode"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Populating Przychodnia Table\Converting from Unicode.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Inputs[Data Conversion Input].Columns[Miasto]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Miasto"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Miasto]" />
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Inputs[Data Conversion Input].Columns[Kod_pocztowy]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Kod_pocztowy"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Kod_pocztowy]" />
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Inputs[Data Conversion Input].Columns[Ulica]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Ulica"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Ulica]" />
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Inputs[Data Conversion Input].Columns[Nr_budynku]"
+                      cachedDataType="r8"
+                      cachedName="Nr_budynku"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Nr_budynku]" />
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Inputs[Data Conversion Input].Columns[Wielkość_przychodni]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Wielkość_przychodni"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Wielkość_przychodni]" />
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Inputs[Data Conversion Input].Columns[ID_przychodni]"
+                      cachedDataType="i4"
+                      cachedName="ID_przychodni"
+                      lineageId="Package\Populating Przychodnia Table\121:invalid" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Populating Przychodnia Table\Converting from Unicode.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Kod_pocztowy]"
+                      name="Kod_pocztowy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Kod_pocztowy]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Miasto]"
+                      name="Miasto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Miasto]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Nr_budynku]"
+                      name="Nr_budynku"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Nr_budynku]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Ulica]"
+                      name="Ulica"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Ulica]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Wielkość_przychodni]"
+                      name="Wielkość_przychodni"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Wielkość_przychodni]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Copy of ID_przychodni]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Copy of ID_przychodni]"
+                      name="Copy of ID_przychodni"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populating Przychodnia Table\121:invalid}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Populating Przychodnia Table\Converting from Unicode.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating Przychodnia Table\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Sheet1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating Przychodnia Table\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="{9D278C6B-C373-404A-87F5-7BAFC2FE8B48}:invalid"
+                  connectionManagerRefId="{9D278C6B-C373-404A-87F5-7BAFC2FE8B48}:invalid"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Miasto]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].ExternalColumns[Miasto]"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Miasto]"
+                      name="Miasto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Kod_pocztowy]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].ExternalColumns[Kod_pocztowy]"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Kod_pocztowy]"
+                      name="Kod_pocztowy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Ulica]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].ExternalColumns[Ulica]"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Ulica]"
+                      name="Ulica"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Nr_budynku]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].ExternalColumns[Nr_budynku]"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Nr_budynku]"
+                      name="Nr_budynku"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Wielkość_przychodni]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].ExternalColumns[Wielkość_przychodni]"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].Columns[Wielkość_przychodni]"
+                      name="Wielkość_przychodni"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].ExternalColumns[Miasto]"
+                      dataType="wstr"
+                      length="255"
+                      name="Miasto" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].ExternalColumns[Kod_pocztowy]"
+                      dataType="wstr"
+                      length="255"
+                      name="Kod_pocztowy" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].ExternalColumns[Ulica]"
+                      dataType="wstr"
+                      length="255"
+                      name="Ulica" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].ExternalColumns[Nr_budynku]"
+                      dataType="r8"
+                      name="Nr_budynku" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output].ExternalColumns[Wielkość_przychodni]"
+                      dataType="wstr"
+                      length="255"
+                      name="Wielkość_przychodni" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[Miasto]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[Miasto]"
+                      name="Miasto" />
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[Kod_pocztowy]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[Kod_pocztowy]"
+                      name="Kod_pocztowy" />
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[Ulica]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[Ulica]"
+                      name="Ulica" />
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[Nr_budynku]"
+                      dataType="r8"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[Nr_budynku]"
+                      name="Nr_budynku" />
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[Wielkość_przychodni]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[Wielkość_przychodni]"
+                      name="Wielkość_przychodni" />
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating Przychodnia Table\Przychodnia (DW)"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Przychodnia (DW)"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Przychodnia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating Przychodnia Table\Przychodnia (DW).Connections[OleDbConnection]"
+                  connectionManagerID="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  connectionManagerRefId="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].Columns[Converting from Unicode.Miasto]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Converting from Unicode.Miasto"
+                      externalMetadataColumnId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].ExternalColumns[Miasto]"
+                      lineageId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Miasto]" />
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].Columns[Converting from Unicode.Kod_pocztowy]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Converting from Unicode.Kod_pocztowy"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].ExternalColumns[Kod_pocztowy]"
+                      lineageId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Kod_pocztowy]" />
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].Columns[Converting from Unicode.Ulica]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Converting from Unicode.Ulica"
+                      externalMetadataColumnId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].ExternalColumns[Ulica]"
+                      lineageId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Ulica]" />
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].Columns[Converting from Unicode.Nr_budynku]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Converting from Unicode.Nr_budynku"
+                      externalMetadataColumnId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].ExternalColumns[Nr_budynku]"
+                      lineageId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Nr_budynku]" />
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].Columns[Converting from Unicode.Wielkość_przychodni]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Converting from Unicode.Wielkość_przychodni"
+                      externalMetadataColumnId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].ExternalColumns[Wielkość_przychodni]"
+                      lineageId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Wielkość_przychodni]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].ExternalColumns[ID_przychodni]"
+                      dataType="i4"
+                      name="ID_przychodni" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].ExternalColumns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Miasto" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].ExternalColumns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="Kod_pocztowy" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].ExternalColumns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="60"
+                      name="Ulica" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].ExternalColumns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="5"
+                      name="Nr_budynku" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input].ExternalColumns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="Wielkość_przychodni" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating Przychodnia Table\Przychodnia (DW).Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Przychodnia (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating Przychodnia Table\Przychodnia (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Przychodnia (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating Przychodnia Table\Przychodnia (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort by Kod_pocztowy"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Inputs[Sort Input].Columns[Kod_pocztowy]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Kod_pocztowy"
+                      lineageId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Kod_pocztowy]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Inputs[Sort Input].Columns[Miasto]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Miasto"
+                      lineageId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Miasto]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Inputs[Sort Input].Columns[Nr_budynku]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nr_budynku"
+                      lineageId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Nr_budynku]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Inputs[Sort Input].Columns[Ulica]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Ulica"
+                      lineageId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Ulica]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Inputs[Sort Input].Columns[Wielkość_przychodni]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Wielkość_przychodni"
+                      lineageId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Wielkość_przychodni]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Kod_pocztowy]"
+                      name="Converting from Unicode.Kod_pocztowy"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Kod_pocztowy]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Miasto]"
+                      name="Converting from Unicode.Miasto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Miasto]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Nr_budynku]"
+                      name="Converting from Unicode.Nr_budynku">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Nr_budynku]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Ulica]"
+                      name="Converting from Unicode.Ulica">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Ulica]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output].Columns[Converting from Unicode.Wielkość_przychodni]"
+                      name="Converting from Unicode.Wielkość_przychodni">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output].Columns[Wielkość_przychodni]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Populating Przychodnia Table.Paths[Data Conversion Output]"
+              endId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Inputs[Sort Input]"
+              name="Data Conversion Output"
+              startId="Package\Populating Przychodnia Table\Converting from Unicode.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Populating Przychodnia Table.Paths[Excel Source Output]"
+              endId="Package\Populating Przychodnia Table\Converting from Unicode.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Populating Przychodnia Table\Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Populating Przychodnia Table.Paths[Sort Output]"
+              endId="Package\Populating Przychodnia Table\Przychodnia (DW).Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\Populating Przychodnia Table\Sort by Kod_pocztowy.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Populating Rejestrator_medyczny Table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{256c8889-c799-478a-b067-976aabb682aa}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populating Rejestrator_medyczny Table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW)"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Rejestrator medyczny  (DW)"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Przychodnia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Connections[OleDbConnection]"
+                  connectionManagerID="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  connectionManagerRefId="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].Columns[ID_przychodni]"
+                      cachedDataType="i4"
+                      cachedName="ID_przychodni"
+                      externalMetadataColumnId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].ExternalColumns[ID_przychodni]"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[ID_przychodni]" />
+                    <inputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].Columns[Miasto]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Miasto"
+                      externalMetadataColumnId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].ExternalColumns[Miasto]"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Miasto]" />
+                    <inputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].Columns[Kod_pocztowy]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Kod_pocztowy"
+                      externalMetadataColumnId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].ExternalColumns[Kod_pocztowy]"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Kod_pocztowy]" />
+                    <inputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].Columns[Ulica]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="Ulica"
+                      externalMetadataColumnId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].ExternalColumns[Ulica]"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Ulica]" />
+                    <inputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].Columns[Nr_budynku]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Nr_budynku"
+                      externalMetadataColumnId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].ExternalColumns[Nr_budynku]"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Nr_budynku]" />
+                    <inputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].Columns[Wielkość_przychodni]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Wielkość_przychodni"
+                      externalMetadataColumnId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].ExternalColumns[Wielkość_przychodni]"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Wielkość_przychodni]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].ExternalColumns[ID_przychodni]"
+                      dataType="i4"
+                      name="ID_przychodni" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].ExternalColumns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Miasto" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].ExternalColumns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="Kod_pocztowy" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].ExternalColumns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="60"
+                      name="Ulica" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].ExternalColumns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="5"
+                      name="Nr_budynku" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input].ExternalColumns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="Wielkość_przychodni" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster)"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Rejestrator medyczny (ClinicMaster)"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Przychodnia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Connections[OleDbConnection]"
+                  connectionManagerID="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  connectionManagerRefId="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[ID_przychodni]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[ID_przychodni]"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[ID_przychodni]"
+                      name="ID_przychodni"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Miasto]"
+                      length="30"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Miasto]"
+                      name="Miasto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Kod_pocztowy]"
+                      length="6"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Kod_pocztowy]"
+                      name="Kod_pocztowy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Ulica]"
+                      length="60"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Ulica]"
+                      name="Ulica"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Nr_budynku]"
+                      length="5"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Nr_budynku]"
+                      name="Nr_budynku"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Wielkość_przychodni]"
+                      length="20"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].Columns[Wielkość_przychodni]"
+                      name="Wielkość_przychodni"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[ID_przychodni]"
+                      dataType="i4"
+                      name="ID_przychodni" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Miasto" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="Kod_pocztowy" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="60"
+                      name="Ulica" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="5"
+                      name="Nr_budynku" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="Wielkość_przychodni" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ID_przychodni]"
+                      dataType="i4"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ID_przychodni]"
+                      name="ID_przychodni" />
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Miasto]"
+                      name="Miasto" />
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Kod_pocztowy]"
+                      name="Kod_pocztowy" />
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Ulica]"
+                      name="Ulica" />
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Nr_budynku]"
+                      name="Nr_budynku" />
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Wielkość_przychodni]"
+                      name="Wielkość_przychodni" />
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Populating Rejestrator_medyczny Table.Paths[OLE DB Source Output]"
+              endId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW).Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster).Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Populating Wizyta Table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8d974ebb-581e-4107-8c0e-3c8ff8dbbf39}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populating Wizyta Table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster)"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Wizyta (ClinicMaster)"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Przychodnia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Connections[OleDbConnection]"
+                  connectionManagerID="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  connectionManagerRefId="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[ID_przychodni]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[ID_przychodni]"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[ID_przychodni]"
+                      name="ID_przychodni"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Miasto]"
+                      length="30"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Miasto]"
+                      name="Miasto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Kod_pocztowy]"
+                      length="6"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Kod_pocztowy]"
+                      name="Kod_pocztowy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Ulica]"
+                      length="60"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Ulica]"
+                      name="Ulica"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Nr_budynku]"
+                      length="5"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Nr_budynku]"
+                      name="Nr_budynku"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Wielkość_przychodni]"
+                      length="20"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Wielkość_przychodni]"
+                      name="Wielkość_przychodni"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[ID_przychodni]"
+                      dataType="i4"
+                      name="ID_przychodni" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Miasto" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="Kod_pocztowy" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="60"
+                      name="Ulica" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="5"
+                      name="Nr_budynku" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].ExternalColumns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="Wielkość_przychodni" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ID_przychodni]"
+                      dataType="i4"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ID_przychodni]"
+                      name="ID_przychodni" />
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Miasto]"
+                      name="Miasto" />
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Kod_pocztowy]"
+                      name="Kod_pocztowy" />
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Ulica]"
+                      name="Ulica" />
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Nr_budynku]"
+                      name="Nr_budynku" />
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[Wielkość_przychodni]"
+                      name="Wielkość_przychodni" />
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating Wizyta Table\Wizyta (DW)"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Wizyta (DW)"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Przychodnia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating Wizyta Table\Wizyta (DW).Connections[OleDbConnection]"
+                  connectionManagerID="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  connectionManagerRefId="{EF40446F-36F4-4A81-85E1-CFEB414BAA6B}:invalid"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].Columns[ID_przychodni]"
+                      cachedDataType="i4"
+                      cachedName="ID_przychodni"
+                      externalMetadataColumnId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].ExternalColumns[ID_przychodni]"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[ID_przychodni]" />
+                    <inputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].Columns[Miasto]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Miasto"
+                      externalMetadataColumnId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].ExternalColumns[Miasto]"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Miasto]" />
+                    <inputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].Columns[Kod_pocztowy]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Kod_pocztowy"
+                      externalMetadataColumnId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].ExternalColumns[Kod_pocztowy]"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Kod_pocztowy]" />
+                    <inputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].Columns[Ulica]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="Ulica"
+                      externalMetadataColumnId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].ExternalColumns[Ulica]"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Ulica]" />
+                    <inputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].Columns[Nr_budynku]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Nr_budynku"
+                      externalMetadataColumnId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].ExternalColumns[Nr_budynku]"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Nr_budynku]" />
+                    <inputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].Columns[Wielkość_przychodni]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Wielkość_przychodni"
+                      externalMetadataColumnId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].ExternalColumns[Wielkość_przychodni]"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output].Columns[Wielkość_przychodni]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].ExternalColumns[ID_przychodni]"
+                      dataType="i4"
+                      name="ID_przychodni" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].ExternalColumns[Miasto]"
+                      codePage="1250"
+                      dataType="str"
+                      length="30"
+                      name="Miasto" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].ExternalColumns[Kod_pocztowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="Kod_pocztowy" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].ExternalColumns[Ulica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="60"
+                      name="Ulica" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].ExternalColumns[Nr_budynku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="5"
+                      name="Nr_budynku" />
+                    <externalMetadataColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input].ExternalColumns[Wielkość_przychodni]"
+                      codePage="1250"
+                      dataType="str"
+                      length="20"
+                      name="Wielkość_przychodni" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating Wizyta Table\Wizyta (DW).Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating Wizyta Table\Wizyta (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating Wizyta Table\Wizyta (DW).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Populating Wizyta Table.Paths[OLE DB Source Output]"
+              endId="Package\Populating Wizyta Table\Wizyta (DW).Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Populating Wizyta Table\Wizyta (ClinicMaster).Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{ac99b5e3-56aa-49c5-a31a-5562a43f4b56}"
+      DTS:From="Package\Populating Przychodnia Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Populating Lekarz Table" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Populating Lekarz Table"
+          TopLeft="69,202" />
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Populating Pacjent Table"
+          TopLeft="367,65" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Populating Przychodnia Table"
+          TopLeft="60,66" />
+        <NodeLayout
+          Size="265,42"
+          Id="Package\Populating Rejestrator_medyczny Table"
+          TopLeft="639,60" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Populating Wizyta Table"
+          TopLeft="372,342" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="166.5,108">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,94"
+              Start="0,0"
+              End="0,86.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,86.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Populating Lekarz Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Populating Lekarz Table\Lekarz (ClinicMaster)"
+          TopLeft="445,190" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Populating Lekarz Table\Lekarz (DW)"
+          TopLeft="470,336" />
+        <EdgeLayout
+          Id="Package\Populating Lekarz Table.Paths[OLE DB Source Output]"
+          TopLeft="536.25,232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,104"
+              Start="0,0"
+              End="0,96.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,96.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Populating Pacjent Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Populating Pacjent Table\Pacjent (ClinicMaster)"
+          TopLeft="480,165" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Populating Pacjent Table\Pacjent (DW)"
+          TopLeft="499,311" />
+        <EdgeLayout
+          Id="Package\Populating Pacjent Table.Paths[OLE DB Source Output]"
+          TopLeft="570.25,207">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,104"
+              Start="0,0"
+              End="0,96.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,96.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Populating Przychodnia Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Populating Przychodnia Table\Sort by Kod_pocztowy"
+          TopLeft="584,338" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Populating Przychodnia Table\Converting from Unicode"
+          TopLeft="572,221" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Populating Przychodnia Table\Przychodnia (DW)"
+          TopLeft="595,461" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Populating Przychodnia Table\Excel Source"
+          TopLeft="603,38" />
+        <EdgeLayout
+          Id="Package\Populating Przychodnia Table.Paths[Data Conversion Output]"
+          TopLeft="673,263">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,75"
+              Start="0,0"
+              End="0,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating Przychodnia Table.Paths[Excel Source Output]"
+          TopLeft="671.25,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,141"
+              Start="0,0"
+              End="0,133.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,133.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,58.75,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating Przychodnia Table.Paths[Sort Output]"
+          TopLeft="676.5,380">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,81"
+              Start="0,0"
+              End="0,73.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Populating Rejestrator_medyczny Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny  (DW)"
+          TopLeft="507,284" />
+        <NodeLayout
+          Size="249,42"
+          Id="Package\Populating Rejestrator_medyczny Table\Rejestrator medyczny (ClinicMaster)"
+          TopLeft="482,138" />
+        <EdgeLayout
+          Id="Package\Populating Rejestrator_medyczny Table.Paths[OLE DB Source Output]"
+          TopLeft="610,180">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,104"
+              Start="0,0"
+              End="0,96.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,96.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Populating Wizyta Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Populating Wizyta Table\Wizyta (ClinicMaster)"
+          TopLeft="508,178" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Populating Wizyta Table\Wizyta (DW)"
+          TopLeft="533,324" />
+        <EdgeLayout
+          Id="Package\Populating Wizyta Table.Paths[OLE DB Source Output]"
+          TopLeft="599.75,220">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,104"
+              Start="0,0"
+              End="0,96.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,96.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,10 @@
+insert into Śmieci (Rodzaj_wizyty, Opinia) values ('REMOTE', 'VERY SATISFIED');
+insert into Śmieci (Rodzaj_wizyty, Opinia) values ('REMOTE', 'SATISFIED');
+insert into Śmieci (Rodzaj_wizyty, Opinia) values ('REMOTE', 'NEUTRAL');
+insert into Śmieci (Rodzaj_wizyty, Opinia) values ('REMOTE', 'DISSATISFIED');
+insert into Śmieci (Rodzaj_wizyty, Opinia) values ('REMOTE', 'VERY DISSATISFIED');
+insert into Śmieci (Rodzaj_wizyty, Opinia) values ('STATIONARY', 'VERY SATISFIED');
+insert into Śmieci (Rodzaj_wizyty, Opinia) values ('STATIONARY', 'SATISFIED');
+insert into Śmieci (Rodzaj_wizyty, Opinia) values ('STATIONARY', 'NEUTRAL');
+insert into Śmieci (Rodzaj_wizyty, Opinia) values ('STATIONARY', 'DISSATISFIED');
+insert into Śmieci (Rodzaj_wizyty, Opinia) values ('STATIONARY', 'VERY DISSATISFIED');

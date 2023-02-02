@@ -1,0 +1,101 @@
+,ID,MIASTO,KOD_POCZTOWY,ULICA,NR_BUDYNKU
+0,0,Dabrowa Gornicza,41-300,Lazy Bledowskie,83
+1,1,Zakrzew,26-652,Poczta Zakrzew kolo Radomia,192
+2,2,Poznan,60-193,Lesnych Skrzatow,200
+3,3,Poznan,61-850,Dluga,134
+4,4,Gdansk,80-636,Mrongowiusza Krzysztofa,247
+5,5,Katowice,40-265,Al. Murckowska,75
+6,6,Warszawa,03-201,Oliwska,14
+7,7,Rzeszow,35-101,Rolnicza,236
+8,8,Lublin,20-211,Gospodarcza,106
+9,9,Kielce,25-827,Ustronie,144
+10,10,Gdansk,80-034,Anny Jagiellonki,29
+11,11,Bialystok,15-589,Kuriany (kolonia),60
+12,12,Krakow,31-709,Wierzynka Mikolaja,84
+13,13,Wroclaw,51-200,Wiedenska,134
+14,14,Katowice,40-048,Rymera Jozefa,63
+15,15,Szczecin,70-872,Dolencow,70
+16,16,Lublin,20-703,Cisowa,64
+17,17,Ropienka,38-711,Poczta Ropienka,64
+18,18,Zawiercie,42-400,Kombatantow,228
+19,19,Krakow,31-563,Zwyciestwa,118
+20,20,Myslowice,41-408,Dzierzonia Jana,142
+21,21,Lublin,20-605,Grazyny,75
+22,22,Katowice,40-631,Stahla Wlodzimierza,137
+23,23,Szczecin,70-387,Honorowych Krwiodawcow,165
+24,24,Krakow,30-432,Szumca Janka,80
+25,25,Krakow,30-603,Kurasia Ferdynanda,2
+26,26,Koszalin,75-813,Irysow,237
+27,27,Bialystok,15-156,Rumcajsa,176
+28,28,Krakow,30-653,Gminna,99
+29,29,Rzeszow,35-322,Wawozowa,32
+30,30,Gdansk,80-365,Czarny Dwor,74
+31,31,Gdansk,80-339,Admirala Dickmana Arenda,72
+32,32,Lublin,20-115,Kowalska,57
+33,33,Lodz,93-134,Poznanska,84
+34,34,Kedzierzyn-Kozle,47-230,Barbary,94
+35,35,Poznan,61-016,Bartnicza,25
+36,36,Zabrze,41-800,Dworcowa,160
+37,37,Zabrze,41-800,Bohaterow Warszawskich,18
+38,38,Wroclaw,51-152,Micinskiego Tadeusza,167
+39,39,Wroclaw,50-560,Kudowska,74
+40,40,Rybnik,44-270,Akacjowa,217
+41,41,Szczecin,70-886,Spiewna,125
+42,42,Kielce,25-225,Generala Roweckiego Stefana Grota,77
+43,43,Bialystok,15-399,Skladowa,119
+44,44,Warszawa,03-524,Swietej Cecylii,26
+45,45,Lodz,91-728,Drwecka,32
+46,46,Radom,26-610,Chelmonskiego Jozefa,52
+47,47,Krakow,31-710,Kazimierza Jagiellonczyka,198
+48,48,Warszawa,03-104,Zreby,131
+49,49,Wroclaw,53-330,Lacznosci,66
+50,50,Warszawa,02-239,Leonidasa,233
+51,51,Olszyny,33-164,Skrytki Pocztowe Poczta Olszyny kolo Jasla,44
+52,52,Warszawa,01-877,Zgrupowanie Zyrafa,3
+53,53,Warszawa,04-320,Pokrzywnicka,129
+54,54,Gdynia,81-078,Pawia,208
+55,55,Warszawa,00-139,Elektoralna,113
+56,56,Stanislawow,05-304,Poczta Stanislawow kolo Warszawy Rynek 7,3
+57,57,Poznan,61-051,Goplanska,67
+58,58,Rybnik,44-200,Jankowicka,177
+59,59,Chorzow,41-500,Glogowska,41
+60,60,Gdynia,81-592,Podworzowa,110
+61,61,Gdynia,81-367,Obroncow Wybrzeza,126
+62,62,Warszawa,00-459,Hoene-Wronskiego Jozefa Marii nr 1,41
+63,63,Warszawa,03-893,Bukowiecka,5
+64,64,Pludry,46-375,Poczta Dobrodzien Lesna 4,139
+65,65,Szczecin,70-012,Kakolowa,76
+66,66,Krakow,31-932,Artystow,12
+67,67,Wroclaw,50-227,Kleczkowska,172
+68,68,Warszawa,00-169,Lewartowskiego Jozefa,126
+69,69,Bydgoszcz,85-137,Halicka,204
+70,70,Gdynia,81-390,Kilinskiego Jana,2
+71,71,Podleze,32-003,Poczta Podleze kolo Krakowa,74
+72,72,Warszawa,00-446,Fabryczna,57
+73,73,Szczecin,70-479,Al. Wojska Polskiego,41
+74,74,Lodz,94-252,Inowroclawska,163
+75,75,Krakow,31-126,Michalowskiego Piotra,243
+76,76,Gdansk,80-210,Al. Zwyciestwa,123
+77,77,Warszawa,03-272,Kusznikow,87
+78,78,Szczecin,70-020,Ustronie,144
+79,79,Gdansk,80-299,Herosa,247
+80,80,Bielsko-Biala,43-344,Barkowska,40
+81,81,Warszawa,01-343,Legionowa,181
+82,82,Lodz,91-729,Smutna,195
+83,83,Raciborz,47-400,Agnieszki,237
+84,84,Krakow,30-622,Beskidzka,62
+85,85,Koszalin,75-813,Roz,216
+86,86,Lodz,93-438,Rodzinna,189
+87,87,Szczecin,70-713,Jedwabnicza,214
+88,88,Bialystok,15-045,Piasta,62
+89,89,Lublin,20-150,Bursaki,164
+90,90,Gdansk,80-720,Poleze,64
+91,91,Krakow,30-698,Lysogorska,179
+92,92,Warszawa,02-843,6 Sierpnia,152
+93,93,Gdynia,81-120,Algierska,159
+94,94,Warszawa,02-495,Malinowa,10
+95,95,Lublin,20-716,Wokulskiego,56
+96,96,Krakow,31-144,Asnyka Adama,26
+97,97,Rzeszow,35-073,Pl. Wolnosci,157
+98,98,Warszawa,04-307,Makowska,128
+99,99,Krakow,30-418,Zakopianska,244

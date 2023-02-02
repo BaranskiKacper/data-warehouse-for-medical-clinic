@@ -1,0 +1,76 @@
+CREATE DATABASE PRZYCHODNIA
+
+USE PRZYCHODNIA
+
+CREATE TABLE Przychodnia(
+	ID_przychodni INT IDENTITY(1,1) PRIMARY KEY,
+	Miasto VARCHAR(30) NOT NULL,
+	Kod_pocztowy VARCHAR(6) NOT NULL,
+	Ulica VARCHAR(60) NOT NULL,
+	Nr_budynku VARCHAR(5) NOT NULL,
+	Wielkość_przychodni VARCHAR(6) CHECK ( Wielkość_przychodni IN('SMALL', 'MEDIUM', 'BIG')) NOT NULL
+);
+	
+CREATE TABLE Pacjent(
+    ID_pacjenta INT IDENTITY(1,1) PRIMARY KEY,
+    ImieINazwisko VARCHAR(50) NOT NULL,
+	PESEL CHAR(11) CHECK(PESEL LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]') NOT NULL,
+	UNIQUE(PESEL)
+    );
+
+CREATE TABLE Rejestrator_medyczny(
+    ID_rejestratora INT IDENTITY(1,1) PRIMARY KEY,
+	ImieINazwisko VARCHAR(50) NOT NULL,
+	PESEL CHAR(11) CHECK(PESEL LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]') NOT NULL,
+    Staz CHAR(20) NOT NULL,
+	UNIQUE(PESEL)
+    );
+
+CREATE TABLE Lekarz(
+    ID_lekarza INT IDENTITY(1,1) PRIMARY KEY,
+	ID_przychodni INT REFERENCES Przychodnia(ID_przychodni) NOT NULL,
+    ImieINazwisko VARCHAR(50) NOT NULL,
+	PESEL CHAR(11) CHECK(PESEL LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]') NOT NULL,
+    Specjalizacja VARCHAR(20) CHECK ( Specjalizacja IN ('CARDIOLOGIST', 'ANESTHESIOLOGIST', 'INTENSIVIST',
+														'ORTHOPEDIC SURGEON', 'DERMATOLOGIST','ONCOLOGIST',
+														'UROLOGIST','RHINOLOGIST','PSYCHIATRIST','RADIOLOGIST',
+														'SURGEON', 'PATHOLOGIST','GYNECOLOGIST', 'PULMONOLOGIST',
+														'RHEUMATOLOGIST', 'DENTIST', 'FAMILY DOCTOR', 'OPTOMETRIST'))
+														NOT NULL,
+	UNIQUE(PESEL)
+    );
+	
+CREATE TABLE Data_(
+	ID_daty INT IDENTITY(1,1) PRIMARY KEY,
+	Data_ Date NOT NULL,
+	Rok INT NOT NULL,
+	Miesiąc VARCHAR(10) CHECK(Miesiąc IN('JANUARY', 'FEBRUARY','MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER','NOVEMBER', 'DECEMBER')) NOT NULL,
+	Dzień INT NOT NULL,
+	Pora_roku VARCHAR(6) CHECK ( Pora_roku IN('SPRING', 'SUMMER', 'AUTUMN',  'WINTER')) NOT NULL,
+	Dzień_tygodnia VARCHAR(10) CHECK (Dzień_tygodnia IN('SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY')) NOT NULL
+);
+
+CREATE TABLE Czas(
+	ID_czasu INT IDENTITY(1,1) PRIMARY KEY,
+	Godzina VARCHAR(20) NOT NULL,
+	Pora_dnia VARCHAR(20) NOT NULL
+);
+
+
+CREATE TABLE Śmieci(
+	ID_śmieci INT IDENTITY(1,1) PRIMARY KEY,
+	Rodzaj_wizyty VARCHAR(10) CHECK ( Rodzaj_wizyty IN ('REMOTE','STATIONARY')) NOT NULL, 
+	Opinia VARCHAR(20) CHECK (Opinia IN('VERY SATISFIED','SATISFIED','NEUTRAL','DISSATISFIED','VERY DISSATISFIED')) NOT NULL
+);
+
+CREATE TABLE Wizyta(
+	ID_rejestratora INT REFERENCES Rejestrator_medyczny(ID_rejestratora) NOT NULL,
+	ID_pacjenta INT REFERENCES Pacjent(ID_pacjenta) NOT NULL,
+    ID_lekarza INT REFERENCES Lekarz(ID_lekarza) NOT NULL,
+    ID_daty_wizyty INT REFERENCES Data_(ID_daty) NOT NULL,
+    ID_daty_rejestracji INT REFERENCES Data_(ID_daty) NOT NULL,
+	ID_czasu_wizyty INT REFERENCES Czas(ID_czasu) NOT NULL,
+	ID_czasu_rejestracji INT REFERENCES Czas(ID_czasu) NOT NULL,
+	ID_śmieci INT REFERENCES Śmieci(ID_śmieci) NOT NULL,
+	Czas_oczekiwania INT NOT NULL
+    );

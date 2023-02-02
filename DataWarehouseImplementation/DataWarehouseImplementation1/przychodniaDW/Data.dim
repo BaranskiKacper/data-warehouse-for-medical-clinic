@@ -1,0 +1,337 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8a56bd77-be39-4e74-a51d-bb29cabfe4e6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Data</ID>
+  <Name>Data</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4835" scrolltop="-5596" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12859" y="9737" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Data_" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3149" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004d0c00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Data_" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-4835</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5596</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="344cb6f3-8ba7-4d75-92c1-77d9ae4adf12">
+    <DataSourceViewID>PRZYCHODNIA</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="7a35e644-91f7-4752-bcc4-6602c7bc642c">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="058570c8-6c71-4e83-8d68-4bc147739edf">
+      <ID>ID Daty</ID>
+      <Name>ID Daty</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1bda80e7-c2fe-4893-aec8-0c7a43c855e2">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="985d9b00-23ae-45f6-a74c-c4de7d906377">
+            <TableID>dbo_Data_</TableID>
+            <ColumnID>ID_daty</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="584234de-6681-47ba-bf55-9a2e92a254b6">
+          <AttributeID>Data</AttributeID>
+          <Name>Data</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7be0efa4-97cb-4ae5-8069-51a2f5088316">
+          <AttributeID>Rok</AttributeID>
+          <Name>Rok</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4288d019-9c9c-430c-ad6e-0a975d07aa71">
+          <AttributeID>Miesiąc</AttributeID>
+          <Name>Miesiąc</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c65c9016-369b-4cbe-b707-e76e1bb1c36b">
+          <AttributeID>Dzień</AttributeID>
+          <Name>Dzień</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="303cdd32-9299-4b8d-8bda-1f473b17e7dd">
+          <AttributeID>Pora Roku</AttributeID>
+          <Name>Pora Roku</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1d5e5e1a-4275-43f2-8ad7-6ee84253759b">
+          <AttributeID>Dzień Tygodnia</AttributeID>
+          <Name>Dzień Tygodnia</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5b5fa14b-3dc5-4779-8772-dd30fa14585b">
+      <ID>Data</ID>
+      <Name>Data</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="44e9f90a-2d43-4e39-8fc7-ec0b73b84e1c">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9ef9c267-8ef0-49b8-bd3c-6db121a30fcc">
+            <TableID>dbo_Data_</TableID>
+            <ColumnID>Data_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5124b9eb-7fed-4ab0-8a19-4bd8cccf3979">
+      <ID>Rok</ID>
+      <Name>Rok</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2f53b7be-491b-44a3-a99f-928b241bad0f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8ac1c7ce-7c15-41b8-831d-f78e791c1d69">
+            <TableID>dbo_Data_</TableID>
+            <ColumnID>Rok</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ee854289-7b4d-404a-9e32-2406879f0b17">
+      <ID>Miesiąc</ID>
+      <Name>Miesiąc</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f0001de5-823c-4a4b-84a6-88bbfe642d19">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="eb9836b1-8739-48f4-a5e9-8caf1e1b0610">
+            <TableID>dbo_Data_</TableID>
+            <ColumnID>Miesiąc</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c8e1d3f3-4ccb-414d-b036-012a4f43be95">
+      <ID>Dzień</ID>
+      <Name>Dzień</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6416a924-6b1b-4bb4-83f4-33dfea9ee27d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="02c8ea63-92e3-4485-9c9e-a331781f167a">
+            <TableID>dbo_Data_</TableID>
+            <ColumnID>Dzień</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ccae9afe-f4a6-4be4-9eaf-9eaba40c91db">
+      <ID>Pora Roku</ID>
+      <Name>Pora Roku</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fa64f112-12fb-4935-90be-8f8b6007d2f6">
+          <DataType>WChar</DataType>
+          <DataSize>6</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4862b8d6-8555-4528-b508-e43ff157784a">
+            <TableID>dbo_Data_</TableID>
+            <ColumnID>Pora_roku</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="20f3a766-99b6-42de-aac3-3e3f06dac580">
+      <ID>Dzień Tygodnia</ID>
+      <Name>Dzień Tygodnia</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9ae82c5f-01a1-425e-8e22-5804c9f55379">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="485ae979-0f7d-4128-a6ac-ccce125ecd75">
+            <TableID>dbo_Data_</TableID>
+            <ColumnID>Dzień_tygodnia</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="2411151b-6141-4ba4-9205-f00d997f5913">
+      <ID>Hierarchy</ID>
+      <Name>Wizyty w dni tygodnia</Name>
+      <Levels>
+        <Level dwd:design-time-name="f9150cb6-29cb-434a-b6f6-dc0ce184c34a">
+          <ID>Rok</ID>
+          <Name>Rok</Name>
+          <SourceAttributeID>Rok</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="50c90e52-8ea0-4b0b-82f7-eaf2f54503ab">
+          <ID>Miesiąc</ID>
+          <Name>Miesiąc</Name>
+          <SourceAttributeID>Miesiąc</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="d829c674-0818-44c0-8eb4-0fadc12421e1">
+          <ID>Dzień Tygodnia</ID>
+          <Name>Dzień Tygodnia</Name>
+          <SourceAttributeID>Dzień Tygodnia</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="b071b6e7-412a-4afa-842f-f0910b82a577">
+      <ID>Hierarchy 1</ID>
+      <Name>Rejestracja w dni tygodnia</Name>
+      <Levels>
+        <Level dwd:design-time-name="0091af7f-fcec-4abd-a415-d556abb04193">
+          <ID>Rok</ID>
+          <Name>Rok</Name>
+          <SourceAttributeID>Rok</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="bfc01785-a960-41e1-890d-04b45a491cf1">
+          <ID>Miesiąc</ID>
+          <Name>Miesiąc</Name>
+          <SourceAttributeID>Miesiąc</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="4ee54ddc-2141-4e18-b471-1a053f7c3acf">
+          <ID>Dzień Tygodnia</ID>
+          <Name>Dzień Tygodnia</Name>
+          <SourceAttributeID>Dzień Tygodnia</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="f321f3ec-a633-4521-8dd8-06757026be38">
+      <ID>Hierarchy 2</ID>
+      <Name>Data wizyty - hierarchia</Name>
+      <Levels>
+        <Level dwd:design-time-name="9dd5f6d6-f013-4de3-9770-f637215204c7">
+          <ID>Rok</ID>
+          <Name>Rok</Name>
+          <SourceAttributeID>Rok</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="56f803af-849f-4e20-be21-e194cbd75459">
+          <ID>Miesiąc</ID>
+          <Name>Miesiąc</Name>
+          <SourceAttributeID>Miesiąc</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="cf4a9c33-653a-4f32-bd32-4f7297ae7d3c">
+          <ID>Data</ID>
+          <Name>Data</Name>
+          <SourceAttributeID>Data</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="9e72f566-1381-4bee-b12a-eae9ecffad23">
+      <ID>Hierarchy 2 1</ID>
+      <Name>Data rejestracja - hierarchia</Name>
+      <Levels>
+        <Level dwd:design-time-name="034d8c20-47e7-4dac-ae28-2670c126e5b2">
+          <ID>Rok</ID>
+          <Name>Rok</Name>
+          <SourceAttributeID>Rok</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="bf3ebd89-ce6a-48ee-a6e4-8f59ddb70112">
+          <ID>Miesiąc</ID>
+          <Name>Miesiąc</Name>
+          <SourceAttributeID>Miesiąc</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="41ae647b-8c92-43c2-8e1f-24be7f5a5e3b">
+          <ID>Data</ID>
+          <Name>Data</Name>
+          <SourceAttributeID>Data</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="321d233e-f37d-4aac-95cc-ff0660794f75">
+      <ID>Hierarchy 3</ID>
+      <Name>Pora roku wizyty</Name>
+      <Levels>
+        <Level dwd:design-time-name="7e657654-74d7-42fc-b1eb-2d51760b1f0c">
+          <ID>Rok</ID>
+          <Name>Rok</Name>
+          <SourceAttributeID>Rok</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="3a713222-7b34-408c-a1bb-92434bc072ef">
+          <ID>Pora Roku</ID>
+          <Name>Pora Roku</Name>
+          <SourceAttributeID>Pora Roku</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="93e4ee78-13c0-4b04-b09d-cf53b0658649">
+      <ID>Hierarchy 3 1</ID>
+      <Name>Pora roku rejestracji</Name>
+      <Levels>
+        <Level dwd:design-time-name="fa7cd7bb-7d28-49f9-8f9b-a86355fe9b80">
+          <ID>Rok</ID>
+          <Name>Rok</Name>
+          <SourceAttributeID>Rok</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="3e52e008-506b-443d-ae9b-bdfd628db98c">
+          <ID>Pora Roku</ID>
+          <Name>Pora Roku</Name>
+          <SourceAttributeID>Pora Roku</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

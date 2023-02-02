@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>PRZYCHODNIA</Id>
+            <Name>PRZYCHODNIA</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAoljVyzN2gkiZhThvXMNF1gAAAAAYAAAAUABSAFoAWQBDAEgATwBEAE4ASQBBAAAAEGYAAAABAAAgAAAAMwBY9TygUqz/5OVWLSZat1TtGJucYn5FIexTuJdUR+EAAAAADoAAAAACAAAgAAAAn6JBG/6CHoVjfZGA2N9GOJyqs7eLEqTkd30o0R7LThgQAAAAfO4no1NfU+ZhY/ap8OpXyUAAAADs9Itw9EYPyg6BFAqccCm9mzygij3lSZJpsKaoVhXJRo6fTmavtbKz3GYmojsZJbvjLEueRvRZsbTJLPoaO8Ay</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>PRZYCHODNIA</Id>
+            <Name>PRZYCHODNIA</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAoljVyzN2gkiZhThvXMNF1gAAAAAYAAAAUABSAFoAWQBDAEgATwBEAE4ASQBBAAAAEGYAAAABAAAgAAAA2wnWWk1flEgcl+gBMV/xuYd/8KYXR0DttXOoECZAvA8AAAAADoAAAAACAAAgAAAAtiDz/IxyRlbvecy+qw5nKKhCXm3hpLFbEyRFrvhUzBUQAAAA709JftDk7M5hHYmu73yD/EAAAACUXCRLhgoqyj0RjjXbNTSCxZD4EeUWcH4e13HcaEbH9bKakWSfA02oZciXsZREEJZwLcFgCDYdj2JRSE3vvkYJ</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>DESKTOP-2OSPV3V\MSSQLSERVER01</TargetServer>
+        <TargetDatabase>przychodniaDW</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>
